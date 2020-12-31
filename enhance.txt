@@ -1,0 +1,18 @@
+review district
+
+Kowloon City  	4 +1	
+Sham Shui Po	6 +0 
+Wong Tai Sin	7 +1
+Yau Tsim Mong	8 + 0
+North			11 + 1 and change coordinate?
+	22.500419194646692, 114.14022382747747
+
+
+
+? Sai Kung		12 + 1
+	22.320539050237286, 114.28908247906098
+? Tai Po		14 + 1
+	22.4513638406378, 114.21404774082055
+? Tsuen Wan		15
+
+Do i need to scale down things?

@@ -1,0 +1,1 @@
+https://github.com/marcins/revealjs-simple-gallery

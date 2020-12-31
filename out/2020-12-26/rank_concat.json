@@ -1,0 +1,97 @@
+{
+    "Central & Western": {
+        "today": 1.0,
+        "day7": 17.0,
+        "day14": 51.0
+    },
+    "Eastern": {
+        "today": 2.0,
+        "day7": 23.0,
+        "day14": 66.0
+    },
+    "Islands": {
+        "today": null,
+        "day7": 9.0,
+        "day14": 17.0
+    },
+    "Kowloon City": {
+        "today": 6.0,
+        "day7": 36.0,
+        "day14": 78.0
+    },
+    "Kwai Tsing": {
+        "today": 4.0,
+        "day7": 26.0,
+        "day14": 69.0
+    },
+    "Kwun Tong": {
+        "today": 10.0,
+        "day7": 60.0,
+        "day14": 132.0
+    },
+    "North": {
+        "today": 2.0,
+        "day7": 10.0,
+        "day14": 20.0
+    },
+    "Sai Kung": {
+        "today": 5.0,
+        "day7": 28.0,
+        "day14": 47.0
+    },
+    "Sha Tin": {
+        "today": 2.0,
+        "day7": 22.0,
+        "day14": 91.0
+    },
+    "Sham Shui Po": {
+        "today": 1.0,
+        "day7": 39.0,
+        "day14": 85.0
+    },
+    "Southern": {
+        "today": 1.0,
+        "day7": 4.0,
+        "day14": 11.0
+    },
+    "Tai Po": {
+        "today": 2.0,
+        "day7": 14.0,
+        "day14": 42.0
+    },
+    "Tsuen Wan": {
+        "today": null,
+        "day7": 6.0,
+        "day14": 17.0
+    },
+    "Tuen Mun": {
+        "today": 6.0,
+        "day7": 19.0,
+        "day14": 37.0
+    },
+    "Uncertain": {
+        "today": 3.0,
+        "day7": 51.0,
+        "day14": 99.0
+    },
+    "Wan Chai": {
+        "today": 1.0,
+        "day7": 11.0,
+        "day14": 24.0
+    },
+    "Wong Tai Sin": {
+        "today": 9.0,
+        "day7": 39.0,
+        "day14": 93.0
+    },
+    "Yau Tsim Mong": {
+        "today": 3.0,
+        "day7": 29.0,
+        "day14": 70.0
+    },
+    "Yuen Long": {
+        "today": 1.0,
+        "day7": 19.0,
+        "day14": 41.0
+    }
+}

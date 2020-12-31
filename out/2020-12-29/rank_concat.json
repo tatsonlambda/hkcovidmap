@@ -1,0 +1,116 @@
+{
+    "Central & Western": {
+        "today": null,
+        "day7": 9.0,
+        "day14": 33.0,
+        "all": 322.0
+    },
+    "Eastern": {
+        "today": 5.0,
+        "day7": 20.0,
+        "day14": 63.0,
+        "all": 457.0
+    },
+    "Hong Kong": {
+        "today": null,
+        "day7": null,
+        "day14": null,
+        "all": 1.0
+    },
+    "Islands": {
+        "today": null,
+        "day7": 4.0,
+        "day14": 15.0,
+        "all": 181.0
+    },
+    "Kowloon City": {
+        "today": 6.0,
+        "day7": 38.0,
+        "day14": 74.0,
+        "all": 549.0
+    },
+    "Kwai Tsing": {
+        "today": 2.0,
+        "day7": 24.0,
+        "day14": 58.0,
+        "all": 484.0
+    },
+    "Kwun Tong": {
+        "today": 5.0,
+        "day7": 68.0,
+        "day14": 132.0,
+        "all": 691.0
+    },
+    "North": {
+        "today": null,
+        "day7": 2.0,
+        "day14": 17.0,
+        "all": 189.0
+    },
+    "Sai Kung": {
+        "today": null,
+        "day7": 25.0,
+        "day14": 50.0,
+        "all": 356.0
+    },
+    "Sha Tin": {
+        "today": 2.0,
+        "day7": 10.0,
+        "day14": 62.0,
+        "all": 563.0
+    },
+    "Sham Shui Po": {
+        "today": 7.0,
+        "day7": 51.0,
+        "day14": 92.0,
+        "all": 482.0
+    },
+    "Southern": {
+        "today": 1.0,
+        "day7": 8.0,
+        "day14": 13.0,
+        "all": 204.0
+    },
+    "Tai Po": {
+        "today": 1.0,
+        "day7": 12.0,
+        "day14": 27.0,
+        "all": 231.0
+    },
+    "Tsuen Wan": {
+        "today": null,
+        "day7": 6.0,
+        "day14": 18.0,
+        "all": 211.0
+    },
+    "Tuen Mun": {
+        "today": 1.0,
+        "day7": 21.0,
+        "day14": 38.0,
+        "all": 409.0
+    },
+    "Wan Chai": {
+        "today": 4.0,
+        "day7": 8.0,
+        "day14": 26.0,
+        "all": 306.0
+    },
+    "Wong Tai Sin": {
+        "today": 8.0,
+        "day7": 42.0,
+        "day14": 91.0,
+        "all": 750.0
+    },
+    "Yau Tsim Mong": {
+        "today": 2.0,
+        "day7": 19.0,
+        "day14": 57.0,
+        "all": 597.0
+    },
+    "Yuen Long": {
+        "today": 3.0,
+        "day7": 21.0,
+        "day14": 42.0,
+        "all": 434.0
+    }
+}
