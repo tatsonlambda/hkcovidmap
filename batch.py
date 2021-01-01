@@ -263,8 +263,8 @@ def preprocess_data(batch_data_dir):
 		if district_num != -1:
 			district_en = district_list[district_num]
 			district_zh = district_zh_list[district_num]
-			df_loc.set_value(index, 'real_distict', district_en)
-			df_loc.set_value(index, 'real_distict_zh', district_zh)
+			df_loc.at[index, 'real_distict'] = district_en
+			df_loc.at[index, 'real_distict_zh'] = district_zh
 		
 	return df_case, df_loc
 

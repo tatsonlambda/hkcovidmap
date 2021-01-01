@@ -1,7 +1,7 @@
 pandas
 folium
 numpy
-PIL
+pillow
 matplotlib
 shapely
 imageio
