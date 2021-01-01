@@ -1,0 +1,7 @@
+pandas
+folium
+numpy
+PIL
+matplotlib
+shapely
+imageio

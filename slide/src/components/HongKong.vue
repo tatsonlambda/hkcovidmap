@@ -133,7 +133,7 @@ export default {
             ], 
             translateZh : {
                 "Hong Kong": 11,
-                "Central & Western": "中西區",
+                "Central and Western": "中西區",
                 "Eastern": "東區",
                 "Southern": "南區",
                 "Wan Chai": "灣仔區",

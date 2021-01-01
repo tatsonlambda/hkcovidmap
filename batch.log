@@ -830,3 +830,68 @@ ValueError: Length of passed values is 54, index implies 0
 2020-12-31 08:07 INFO Generate all district case number.
 2020-12-31 08:07 INFO Generate hospitalize case summary.
 2020-12-31 08:07 INFO Batch process end
+2021-01-01 13:05 INFO init
+2021-01-01 13:05 INFO Batch process start
+2021-01-01 13:05 INFO read_data
+2021-01-01 13:06 INFO Generate hk daily case line chart
+2021-01-01 13:06 INFO Generate hk cumulative case line chart
+2021-01-01 13:06 INFO Generate hk case admission pie chart
+2021-01-01 13:06 INFO Generate hk danger zone
+2021-01-01 13:07 INFO Generate all district data 
+2021-01-01 13:07 INFO Generate daily case for district: Central and Western
+2021-01-01 13:07 INFO Generate danger zone for district: Central and Western
+2021-01-01 13:07 INFO Generate danger zone animation for district: Central and Western
+2021-01-01 13:08 INFO Generate daily case for district: Eastern
+2021-01-01 13:08 INFO Generate danger zone for district: Eastern
+2021-01-01 13:08 INFO Generate danger zone animation for district: Eastern
+2021-01-01 13:10 INFO Generate daily case for district: Southern
+2021-01-01 13:10 INFO Generate danger zone for district: Southern
+2021-01-01 13:10 INFO Generate danger zone animation for district: Southern
+2021-01-01 13:11 INFO Generate daily case for district: Wan Chai
+2021-01-01 13:11 INFO Generate danger zone for district: Wan Chai
+2021-01-01 13:11 INFO Generate danger zone animation for district: Wan Chai
+2021-01-01 13:12 INFO Generate daily case for district: Kowloon City
+2021-01-01 13:12 INFO Generate danger zone for district: Kowloon City
+2021-01-01 13:12 INFO Generate danger zone animation for district: Kowloon City
+2021-01-01 13:14 INFO Generate daily case for district: Kwun Tong
+2021-01-01 13:14 INFO Generate danger zone for district: Kwun Tong
+2021-01-01 13:14 INFO Generate danger zone animation for district: Kwun Tong
+2021-01-01 13:15 INFO Generate daily case for district: Sham Shui Po
+2021-01-01 13:15 INFO Generate danger zone for district: Sham Shui Po
+2021-01-01 13:15 INFO Generate danger zone animation for district: Sham Shui Po
+2021-01-01 13:17 INFO Generate daily case for district: Wong Tai Sin
+2021-01-01 13:17 INFO Generate danger zone for district: Wong Tai Sin
+2021-01-01 13:17 INFO Generate danger zone animation for district: Wong Tai Sin
+2021-01-01 13:18 INFO Generate daily case for district: Yau Tsim Mong
+2021-01-01 13:18 INFO Generate danger zone for district: Yau Tsim Mong
+2021-01-01 13:18 INFO Generate danger zone animation for district: Yau Tsim Mong
+2021-01-01 13:19 INFO Generate daily case for district: Islands
+2021-01-01 13:19 INFO Generate danger zone for district: Islands
+2021-01-01 13:19 INFO Generate danger zone animation for district: Islands
+2021-01-01 13:21 INFO Generate daily case for district: Kwai Tsing
+2021-01-01 13:21 INFO Generate danger zone for district: Kwai Tsing
+2021-01-01 13:21 INFO Generate danger zone animation for district: Kwai Tsing
+2021-01-01 13:22 INFO Generate daily case for district: North
+2021-01-01 13:22 INFO Generate danger zone for district: North
+2021-01-01 13:22 INFO Generate danger zone animation for district: North
+2021-01-01 13:23 INFO Generate daily case for district: Sai Kung
+2021-01-01 13:23 INFO Generate danger zone for district: Sai Kung
+2021-01-01 13:23 INFO Generate danger zone animation for district: Sai Kung
+2021-01-01 13:25 INFO Generate daily case for district: Sha Tin
+2021-01-01 13:25 INFO Generate danger zone for district: Sha Tin
+2021-01-01 13:25 INFO Generate danger zone animation for district: Sha Tin
+2021-01-01 13:26 INFO Generate daily case for district: Tai Po
+2021-01-01 13:26 INFO Generate danger zone for district: Tai Po
+2021-01-01 13:26 INFO Generate danger zone animation for district: Tai Po
+2021-01-01 13:27 INFO Generate daily case for district: Tsuen Wan
+2021-01-01 13:27 INFO Generate danger zone for district: Tsuen Wan
+2021-01-01 13:27 INFO Generate danger zone animation for district: Tsuen Wan
+2021-01-01 13:29 INFO Generate daily case for district: Tuen Mun
+2021-01-01 13:29 INFO Generate danger zone for district: Tuen Mun
+2021-01-01 13:29 INFO Generate danger zone animation for district: Tuen Mun
+2021-01-01 13:30 INFO Generate daily case for district: Yuen Long
+2021-01-01 13:30 INFO Generate danger zone for district: Yuen Long
+2021-01-01 13:30 INFO Generate danger zone animation for district: Yuen Long
+2021-01-01 13:31 INFO Generate all district case number.
+2021-01-01 13:31 INFO Generate hospitalize case summary.
+2021-01-01 13:31 INFO Batch process end

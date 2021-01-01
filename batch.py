@@ -27,7 +27,6 @@ import logging
 from logging.handlers import RotatingFileHandler
 import traceback
 
-import json
 
 # logging
 logging.basicConfig(level=logging.INFO,
