@@ -927,3 +927,105 @@ Traceback (most recent call last):
     os.path.basename(self.path), self.start_error_message)
 selenium.common.exceptions.WebDriverException: Message: 'geckodriver' executable needs to be in PATH. 
 
+2021-01-03 16:33 INFO init
+2021-01-03 16:33 INFO Batch process start
+2021-01-03 16:33 INFO read_data
+2021-01-03 16:33 INFO Generate hk daily case line chart
+2021-01-03 16:33 INFO Generate hk cumulative case line chart
+2021-01-03 16:33 INFO Generate hk case admission pie chart
+2021-01-03 16:33 INFO Generate hk danger zone
+2021-01-03 16:33 ERROR Batch process end unexpectedly with an exception.
+Traceback (most recent call last):
+  File "/home/ymlai/anaconda3/envs/hkcovidenv/lib/python3.6/site-packages/selenium/webdriver/common/service.py", line 76, in start
+    stdin=PIPE)
+  File "/home/ymlai/anaconda3/envs/hkcovidenv/lib/python3.6/subprocess.py", line 729, in __init__
+    restore_signals, start_new_session)
+  File "/home/ymlai/anaconda3/envs/hkcovidenv/lib/python3.6/subprocess.py", line 1364, in _execute_child
+    raise child_exception_type(errno_num, err_msg, err_filename)
+FileNotFoundError: [Errno 2] No such file or directory: 'geckodriver': 'geckodriver'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "batch.py", line 657, in main
+    gen_hk_danger_zones(batch_date, 7, df_loc, batch_out_dir)
+  File "batch.py", line 373, in gen_hk_danger_zones
+    img_data = fmap._to_png()
+  File "/home/ymlai/anaconda3/envs/hkcovidenv/lib/python3.6/site-packages/folium/folium.py", line 313, in _to_png
+    driver = webdriver.Firefox(options=options)
+  File "/home/ymlai/anaconda3/envs/hkcovidenv/lib/python3.6/site-packages/selenium/webdriver/firefox/webdriver.py", line 164, in __init__
+    self.service.start()
+  File "/home/ymlai/anaconda3/envs/hkcovidenv/lib/python3.6/site-packages/selenium/webdriver/common/service.py", line 83, in start
+    os.path.basename(self.path), self.start_error_message)
+selenium.common.exceptions.WebDriverException: Message: 'geckodriver' executable needs to be in PATH. 
+
+2021-01-03 19:35 INFO init
+2021-01-03 19:35 INFO Batch process start
+2021-01-03 19:35 INFO read_data
+2021-01-03 19:36 INFO Generate hk daily case line chart
+2021-01-03 19:36 INFO Generate hk cumulative case line chart
+2021-01-03 19:36 INFO Generate hk case admission pie chart
+2021-01-03 19:36 INFO Generate hk danger zone
+2021-01-03 19:36 INFO Generate all district data 
+2021-01-03 19:36 INFO Generate daily case for district: Central and Western
+2021-01-03 19:36 INFO Generate danger zone for district: Central and Western
+2021-01-03 19:36 INFO Generate danger zone animation for district: Central and Western
+2021-01-03 19:37 INFO Generate daily case for district: Eastern
+2021-01-03 19:37 INFO Generate danger zone for district: Eastern
+2021-01-03 19:37 INFO Generate danger zone animation for district: Eastern
+2021-01-03 19:38 INFO Generate daily case for district: Southern
+2021-01-03 19:38 INFO Generate danger zone for district: Southern
+2021-01-03 19:38 INFO Generate danger zone animation for district: Southern
+2021-01-03 19:39 INFO Generate daily case for district: Wan Chai
+2021-01-03 19:39 INFO Generate danger zone for district: Wan Chai
+2021-01-03 19:39 INFO Generate danger zone animation for district: Wan Chai
+2021-01-03 19:40 INFO Generate daily case for district: Kowloon City
+2021-01-03 19:40 INFO Generate danger zone for district: Kowloon City
+2021-01-03 19:40 INFO Generate danger zone animation for district: Kowloon City
+2021-01-03 19:41 INFO Generate daily case for district: Kwun Tong
+2021-01-03 19:41 INFO Generate danger zone for district: Kwun Tong
+2021-01-03 19:41 INFO Generate danger zone animation for district: Kwun Tong
+2021-01-03 19:41 INFO Generate daily case for district: Sham Shui Po
+2021-01-03 19:41 INFO Generate danger zone for district: Sham Shui Po
+2021-01-03 19:41 INFO Generate danger zone animation for district: Sham Shui Po
+2021-01-03 19:42 INFO Generate daily case for district: Wong Tai Sin
+2021-01-03 19:42 INFO Generate danger zone for district: Wong Tai Sin
+2021-01-03 19:42 INFO Generate danger zone animation for district: Wong Tai Sin
+2021-01-03 19:43 INFO Generate daily case for district: Yau Tsim Mong
+2021-01-03 19:43 INFO Generate danger zone for district: Yau Tsim Mong
+2021-01-03 19:43 INFO Generate danger zone animation for district: Yau Tsim Mong
+2021-01-03 19:44 INFO Generate daily case for district: Islands
+2021-01-03 19:44 INFO Generate danger zone for district: Islands
+2021-01-03 19:44 INFO Generate danger zone animation for district: Islands
+2021-01-03 19:45 INFO Generate daily case for district: Kwai Tsing
+2021-01-03 19:45 INFO Generate danger zone for district: Kwai Tsing
+2021-01-03 19:45 INFO Generate danger zone animation for district: Kwai Tsing
+2021-01-03 19:45 INFO Generate daily case for district: North
+2021-01-03 19:45 INFO Generate danger zone for district: North
+2021-01-03 19:45 INFO Generate danger zone animation for district: North
+2021-01-03 19:46 INFO Generate daily case for district: Sai Kung
+2021-01-03 19:46 INFO Generate danger zone for district: Sai Kung
+2021-01-03 19:46 INFO Generate danger zone animation for district: Sai Kung
+2021-01-03 19:47 INFO Generate daily case for district: Sha Tin
+2021-01-03 19:47 INFO Generate danger zone for district: Sha Tin
+2021-01-03 19:47 INFO Generate danger zone animation for district: Sha Tin
+2021-01-03 19:47 INFO Generate daily case for district: Tai Po
+2021-01-03 19:47 INFO Generate danger zone for district: Tai Po
+2021-01-03 19:47 INFO Generate danger zone animation for district: Tai Po
+2021-01-03 19:48 INFO Generate daily case for district: Tsuen Wan
+2021-01-03 19:48 INFO Generate danger zone for district: Tsuen Wan
+2021-01-03 19:48 INFO Generate danger zone animation for district: Tsuen Wan
+2021-01-03 19:49 INFO Generate daily case for district: Tuen Mun
+2021-01-03 19:49 INFO Generate danger zone for district: Tuen Mun
+2021-01-03 19:49 INFO Generate danger zone animation for district: Tuen Mun
+2021-01-03 19:50 INFO Generate daily case for district: Yuen Long
+2021-01-03 19:50 INFO Generate danger zone for district: Yuen Long
+2021-01-03 19:50 INFO Generate danger zone animation for district: Yuen Long
+2021-01-03 19:50 INFO Generate all district case number.
+2021-01-03 19:50 INFO Generate hospitalize case summary.
+2021-01-03 19:50 INFO Batch process end
+2021-01-03 22:16 INFO init
+2021-01-03 22:16 INFO Batch process start
+2021-01-03 22:16 INFO read_data
+2021-01-03 22:17 INFO Batch process end
+2021-01-03 22:17 INFO Update the slide directory

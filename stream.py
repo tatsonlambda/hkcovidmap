@@ -20,10 +20,11 @@ async def screencastSlide(url):
  
     while True:
         await page.screenshot({'path': './covid.png', 'quality': 100, 'fullPage': True})
-        time.sleep(1)
+        time.sleep(0.3)
  
 if __name__ == '__main__':
-    url = 'https://ymlai87416.github.io/hkcovidmap/'
+    #url = 'https://ymlai87416.github.io/hkcovidmap/'
+    url = 'http://localhost:8080/'
     loop = asyncio.get_event_loop()
     loop.run_until_complete(screencastSlide(url))
  

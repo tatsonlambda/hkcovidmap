@@ -645,6 +645,17 @@ def gen_district_data(batch_date, df_case, df_loc, batch_out_dir):
 		gen_district_cum_case2(batch_date, i, df_case, batch_out_dir)
 		gen_district_danger_zones(batch_date, i, df_loc, batch_out_dir)
 
+def updateInfo(batch_out_dir):
+
+	logging.info("Update the slide directory")
+
+	from distutils.dir_util import copy_tree
+
+	source_dir = batch_out_dir
+	dest_dir = "./slide/public/info"
+
+	copy_tree(source_dir, dest_dir)
+
 def main(batch_date, batch_data_dir, batch_out_dir):
 
 	try:
@@ -662,6 +673,8 @@ def main(batch_date, batch_data_dir, batch_out_dir):
 		gen_hospitalize_case_summary(batch_date, df_case, batch_out_dir)
 		
 		logging.info("Batch process end")
+
+		updateInfo(batch_out_dir)
 		
 	except Exception as e:
 		traceback.print_exception(*sys.exc_info()) 
