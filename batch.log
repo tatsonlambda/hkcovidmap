@@ -895,3 +895,35 @@ ValueError: Length of passed values is 54, index implies 0
 2021-01-01 13:31 INFO Generate all district case number.
 2021-01-01 13:31 INFO Generate hospitalize case summary.
 2021-01-01 13:31 INFO Batch process end
+2021-01-03 01:30 INFO init
+2021-01-03 01:30 INFO Batch process start
+2021-01-03 01:30 INFO read_data
+2021-01-03 01:31 INFO Generate hk daily case line chart
+2021-01-03 01:31 INFO Generate hk cumulative case line chart
+2021-01-03 01:31 INFO Generate hk case admission pie chart
+2021-01-03 01:31 INFO Generate hk danger zone
+2021-01-03 01:31 ERROR Batch process end unexpectedly with an exception.
+Traceback (most recent call last):
+  File "/home/ymlai/anaconda3/envs/hkcovidenv/lib/python3.6/site-packages/selenium/webdriver/common/service.py", line 76, in start
+    stdin=PIPE)
+  File "/home/ymlai/anaconda3/envs/hkcovidenv/lib/python3.6/subprocess.py", line 729, in __init__
+    restore_signals, start_new_session)
+  File "/home/ymlai/anaconda3/envs/hkcovidenv/lib/python3.6/subprocess.py", line 1364, in _execute_child
+    raise child_exception_type(errno_num, err_msg, err_filename)
+FileNotFoundError: [Errno 2] No such file or directory: 'geckodriver': 'geckodriver'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "batch.py", line 657, in main
+    gen_hk_danger_zones(batch_date, 7, df_loc, batch_out_dir)
+  File "batch.py", line 373, in gen_hk_danger_zones
+    img_data = fmap._to_png()
+  File "/home/ymlai/anaconda3/envs/hkcovidenv/lib/python3.6/site-packages/folium/folium.py", line 313, in _to_png
+    driver = webdriver.Firefox(options=options)
+  File "/home/ymlai/anaconda3/envs/hkcovidenv/lib/python3.6/site-packages/selenium/webdriver/firefox/webdriver.py", line 164, in __init__
+    self.service.start()
+  File "/home/ymlai/anaconda3/envs/hkcovidenv/lib/python3.6/site-packages/selenium/webdriver/common/service.py", line 83, in start
+    os.path.basename(self.path), self.start_error_message)
+selenium.common.exceptions.WebDriverException: Message: 'geckodriver' executable needs to be in PATH. 
+

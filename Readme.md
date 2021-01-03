@@ -8,7 +8,7 @@ The development environment is Ubuntu server 20
 
 ```bash
 sudo apt update
-sudo apt install firefox python3-pip
+sudo apt install firefox python3-pip ffmpeg
 sudo -H pip3 install selenium
 
 export GECKO_DRIVER_VERSION='v0.28.0'
@@ -17,9 +17,29 @@ tar -xvzf geckodriver-$GECKO_DRIVER_VERSION-linux64.tar.gz
 rm geckodriver-$GECKO_DRIVER_VERSION-linux64.tar.gz
 chmod +x geckodriver
 sudo cp geckodriver /usr/local/bin/
+
+sudo apt-get install pkg-config
+sudo apt-get install libcairo2-dev
+sudo apt install libgirepository1.0-dev
+sudo apt install gir1.2-gst-rtsp-server-1.0
+sudo apt-get install gstreamer1.0-plugins-ugly
 ```
 
 Reference: https://gist.github.com/pcgeek86/a1fd9d26f8ad46b51adf9513f67b95f2
+
+
+## Create a virtual environment 
+
+This program require Python 3.6 to work
+
+Please use the following command to setup environment
+```
+conda env list
+conda create --name hkcovidenv python=3.6
+conda activate hkcovidenv
+
+conda env remove --name hkcovidenv
+```
 
 ## Install python package
 
@@ -76,6 +96,25 @@ http://polygons.openstreetmap.fr/index.py
 	animated for 7 days 
 * district map
 	animated for 7 days 
+
+
+# Architecture setup
+
+1. Install all the program 
+
+2. Setup cron job to run the batch job periodically
+
+3. Run the slide program, and a website is hosted on localhost:8080
+
+4. Run the stream.py to capture screenshot from slide in 1fps
+
+5. Run the streamTest.py to create a stream server
+
+6. Redirect the stream to youtube
+
+	ffmpeg -f lavfi -i anullsrc -rtsp_transport udp -i rtsp://localhost:8554/test -tune zerolatency -vcodec libx264 -t 12:00:00 -pix_fmt + -c:v copy -c:a aac -strict experimental -f flv rtmp://a.rtmp.youtube.com/live2/jse2-gv44-ys64-t9vd-8s4w
+
+
 
 # Reference
 

@@ -5,3 +5,9 @@ pillow
 matplotlib
 shapely
 imageio
+pyee==7.0.3
+pyppeteer
+opencv-python
+pygobject
+pgi
+selenium
