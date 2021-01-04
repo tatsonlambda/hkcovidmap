@@ -100,7 +100,6 @@ http://polygons.openstreetmap.fr/index.py
 * district map
 	animated for 7 days 
 
-
 # Architecture setup
 
 1. Install all the program 
@@ -109,13 +108,11 @@ http://polygons.openstreetmap.fr/index.py
 
 3. Run the slide program, and a website is hosted on localhost:8080
 
-4. Run the stream.py to capture screenshot from slide in 1fps
+4. Run the streamTest2.py to capture screenshot from slide app and create a RTSP stream
 
-5. Run the streamTest.py to create a stream server
+5. Redirect the stream to youtube
 
-6. Redirect the stream to youtube
-
-	ffmpeg -f lavfi -i anullsrc -rtsp_transport udp -i rtsp://localhost:8554/test -tune zerolatency -vcodec libx264 -t 12:00:00 -pix_fmt + -c:v copy -c:a aac -strict experimental -f flv rtmp://a.rtmp.youtube.com/live2/jse2-gv44-ys64-t9vd-8s4w
+	ffmpeg -f lavfi -i anullsrc -rtsp_transport udp -i rtsp://localhost:8554/test -tune zerolatency -vcodec libx264 -t 12:00:00 -pix_fmt + -c:v copy -c:a aac -strict experimental -f flv rtmp://a.rtmp.youtube.com/live2/xxxx-xxxx-xxxx-xxxx-xxxx < /dev/null > /dev/null 2>&1 &
 
 
 
@@ -126,3 +123,6 @@ https://blog.yeshuanova.com/2017/10/python-visulization-folium/
 https://medium.com/coinmonks/visualizing-property-prices-in-hong-kong-with-pandas-overpy-and-folium-595240ffca90
 
 https://flourish.studio/
+
+
+/home/ymlai/.local/share/pyppeteer/local-chromium/588429/chrome-linux/chrome --disable-background-networking --disable-background-timer-throttling --disable-breakpad --disable-browser-side-navigation --disable-client-side-phishing-detection --disable-default-apps --disable-dev-shm-usage --disable-extensions --disable-features=site-per-process --disable-hang-monitor --disable-popup-blocking --disable-prompt-on-repost --disable-sync --disable-translate --metrics-recording-only --no-first-run --safebrowsing-disable-auto-update --enable-automation --password-store=basic --use-mock-keychain --headless --hide-scrollbars --mute-audio about:blank --remote-debugging-port=46381 --user-data-dir=/home/ymlai/.local/share/pyppeteer/.dev_profile/tmp48so0i2y
