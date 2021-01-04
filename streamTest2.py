@@ -35,7 +35,7 @@ class ScreenShotProducer(multiprocessing.Process):
     
         while True:
             # 'fullPage': True, 
-            await page.screenshot({'path': './covid.png', 'quality': 100, 'clip': {'x': 8, 'y': 20, 'width':1280, 'height': 780}})
+            await page.screenshot({'path': './covid.png', 'quality': 100, 'clip': {'x': 8, 'y': 20, 'width':1280, 'height': 720}})
             data = cv2.imread('./covid.png')
             # slower than the consumer
             self.task_queue.put(data)

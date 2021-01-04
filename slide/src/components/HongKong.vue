@@ -232,7 +232,7 @@ td.summary2{
 td.ranking{
     height: 100%;
     width:30%;
-    font-size: 25px;
+    font-size: 20px;
     background-color: white;
 }
 .hk, .display {

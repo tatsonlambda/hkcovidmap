@@ -173,7 +173,7 @@ a {
     height: 100%;
 }
 .title{
-    height: 10%;
+    height: 40px;
 }
 .display{
     width: 100%;
@@ -196,7 +196,7 @@ td.danger{
 }
 .imageMain{
     width: 1280px;
-    height: 702px;
+    height: 650px;
 }
 .imageMainHidden{
     width: 0px;
