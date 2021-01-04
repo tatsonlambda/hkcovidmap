@@ -8,7 +8,7 @@ The development environment is Ubuntu server 20
 
 ```bash
 sudo apt update
-sudo apt install firefox python3-pip ffmpeg
+sudo apt install firefox python3-pip
 sudo -H pip3 install selenium
 
 export GECKO_DRIVER_VERSION='v0.28.0'
@@ -18,15 +18,18 @@ rm geckodriver-$GECKO_DRIVER_VERSION-linux64.tar.gz
 chmod +x geckodriver
 sudo cp geckodriver /usr/local/bin/
 
-sudo apt-get install pkg-config
-sudo apt-get install libcairo2-dev
-sudo apt install libgirepository1.0-dev
-sudo apt install gir1.2-gst-rtsp-server-1.0
-sudo apt-get install gstreamer1.0-plugins-ugly
+sudo apt install pkg-config libcairo2-dev libgirepository1.0-dev gir1.2-gst-rtsp-server-1.0 gstreamer1.0-plugins-ugly ffmpeg
 ```
 
 Reference: https://gist.github.com/pcgeek86/a1fd9d26f8ad46b51adf9513f67b95f2
 
+## Install NPM 
+
+```bash
+sudo apt install npm
+npm install
+npm run serve
+```
 
 ## Create a virtual environment 
 

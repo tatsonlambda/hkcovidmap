@@ -1,0 +1,1 @@
+ffmpeg -f lavfi -i anullsrc -rtsp_transport udp -i rtsp://localhost:8554/test -tune zerolatency -vcodec libx264 -t 12:00:00 -pix_fmt + -c:v copy -c:a aac -strict experimental -f flv rtmp://a.rtmp.youtube.com/live2/jse2-gv44-ys64-t9vd-8s4w 
