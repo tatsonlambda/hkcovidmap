@@ -175,7 +175,9 @@ export default {
                     });
                     // Sort the array based on the second element
                     items.sort(function(first, second) {
-                        return second[1].today - first[1].today;
+                        if(first[0] === "Others") return 1;
+                        else if(second[0] === "Others") return 0;
+                        else return second[1].today - first[1].today;
                     });
 
 
