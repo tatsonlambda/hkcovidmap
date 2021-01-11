@@ -1,7 +1,7 @@
 #! /bin/bash
 
 hour=$(date +%H)
-yesterday=$(date -d "yesterday" '+%Y-%m-%d')
+yesterday=$(date -d "yesterday" '+%Y%m%d')
 today=$(date +'%Y%m%d')
 
 pushd /home/ymlai/hkcovidmap
