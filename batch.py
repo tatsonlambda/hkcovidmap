@@ -265,7 +265,10 @@ def preprocess_data(batch_data_dir):
 			district_zh = district_zh_list[district_num]
 			df_loc.at[index, 'real_distict'] = district_en
 			df_loc.at[index, 'real_distict_zh'] = district_zh
-		
+	
+	# district group by fix
+	df_case['citizenship_district_en'] = df_case['citizenship_district_en'].fillna("Others")
+
 	return df_case, df_loc
 
 def group_case_by_confirmation_date(df_case):
@@ -657,15 +660,14 @@ def gen_district_case_num(batch_date, df_case, batch_out_dir):
 	#by_date.to_csv(output_path, index=True)
 	
 	df_by_date = df_case.loc[:, ['citizenship_district_en']] 
-	all = df_by_date.groupby('citizenship_district_en').size()
+	all_rank = df_by_date.groupby('citizenship_district_en').size()
 	
 	today_rank.name = "today"
 	day7_rank.name = "day7"
 	day14_rank.name = "day14"
-	all.name = "all"
-	pd.concat([today_rank, day7_rank, day14_rank], axis=1)
-	rank_concat= pd.concat([today_rank, day7_rank, day14_rank, all], axis=1)
-	
+	all_rank.name = "all"
+	rank_concat= pd.concat([today_rank, day7_rank, day14_rank, all_rank], axis=1)
+
 	rank_concat2 = rank_concat.filter(items = district_list, axis=0)
 	sum_concat = rank_concat.sum(axis = 0, skipna=True)
 	sum_concat2 = rank_concat2.sum(axis=0, skipna=True)
@@ -739,11 +741,11 @@ def main(batch_date, batch_data_dir, batch_out_dir):
 		download_data(batch_data_dir)
 		df_case, df_loc = preprocess_data(batch_data_dir)
 		
-		gen_hk_daily_and_cum_case(batch_date, df_case, batch_out_dir)
-		gen_hk_admission_pie(batch_date, df_case, batch_out_dir)
-		gen_hk_danger_zones(batch_date, 7, df_loc, batch_out_dir)
-		gen_hk_age_gender_distribution(batch_date, df_case, batch_out_dir)
-		gen_district_data(batch_date, df_case, df_loc, batch_out_dir)
+		#gen_hk_daily_and_cum_case(batch_date, df_case, batch_out_dir)
+		#gen_hk_admission_pie(batch_date, df_case, batch_out_dir)
+		#gen_hk_danger_zones(batch_date, 7, df_loc, batch_out_dir)
+		#gen_hk_age_gender_distribution(batch_date, df_case, batch_out_dir)
+		#gen_district_data(batch_date, df_case, df_loc, batch_out_dir)
 		
 		gen_district_case_num(batch_date, df_case, batch_out_dir)
 		gen_hospitalize_case_summary(batch_date, df_case, batch_out_dir)
