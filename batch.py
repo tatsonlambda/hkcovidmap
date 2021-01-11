@@ -376,6 +376,77 @@ def gen_hk_danger_zones(batch_date, num_days, df_loc, batch_out_dir):
 		img.save(output_path)
 		pageIdx = pageIdx + 1
 
+def gen_hk_age_gender_distribution(batch_date, df_case, batch_out_dir):
+
+	logging.info("Generating age gender distribution")
+
+	day14 = batch_date - timedelta(days=14)
+	day7 = batch_date - timedelta(days=7)
+
+	day14_str = day14.strftime("%Y-%m-%d")
+	day7_str = day7.strftime("%Y-%m-%d")
+	today_str = batch_date.strftime("%Y-%m-%d")
+
+	bins = np.arange(1, 10) * 10
+
+	# today
+	filter_criteria = (df_case['confirmation_date'] == today_str)
+	data_district = df_case[filter_criteria]
+	data_district['age_category'] = np.digitize(data_district.age, bins, right=True)
+	counts_today = data_district.groupby(['age_category', 'gender']).age.count().unstack().fillna(0)
+
+	for i in range(0, 10):
+		if i not in counts_today.index:
+			row = pd.Series({"M": 0, "F": 0}, name=i)
+			counts_today = counts_today.append(row)
+
+	filter_criteria = (df_case['confirmation_date'] > day7_str)
+	data_district = df_case[filter_criteria]
+	data_district['age_category'] = np.digitize(data_district.age, bins, right=True)
+	counts_7 = data_district.groupby(['age_category', 'gender']).age.count().unstack()
+
+	for i in range(0, 10):
+		if i not in counts_today.index:
+			row = pd.Series({"M": 0, "F": 0}, name=i)
+			counts_7 = counts_7.append(row)
+
+	filter_criteria = (df_case['confirmation_date'] > day14_str)
+	data_district = df_case[filter_criteria]
+	data_district['age_category'] = np.digitize(data_district.age, bins, right=True)
+	counts_14 = data_district.groupby(['age_category', 'gender']).age.count().unstack()
+
+	for i in range(0, 10):
+		if i not in counts_today.index:
+			row = pd.Series({"M": 0, "F": 0}, name=i)
+			counts_14 = counts_14.append(row)
+
+	index = np.arange(1, 11) * 10
+
+	color_M = 'tab:blue'
+	color_F = 'tab:orange'
+
+	colors = {'男性': color_M, '女性': color_F}
+	labels = list(colors.keys())
+	handles = [plt.Rectangle([0, 0], 10, 10, color=colors[label]) for label in labels]
+
+	plt.figure(figsize=(20,10))
+	ax = plt.subplot(111)
+
+	w=3
+	w2=2.5
+	ax.bar(index-w, counts_today.M, width=w2, color=color_M,align='center')
+	ax.bar(index-w, counts_today.F, width=w2, color=color_F, align='center', bottom=counts_today.M)
+	ax.bar(index, counts_7.M, width=w2, color=color_M, align='center')
+	ax.bar(index, counts_7.F, width=w2, color=color_F, align='center', bottom=counts_7.M)
+	ax.bar(index+w, counts_14.M, width=w2, color=color_M, align='center')
+	ax.bar(index+w, counts_14.F, width=w2, color=color_F, align='center', bottom=counts_14.M)
+	plt.legend(handles, labels)
+	plt.title(u'香港確診人數性別年齡分佈 (1,7,14天)', fontsize=20)
+
+	fig1 = plt.gcf()
+	output_path=os.path.join(batch_out_dir, "age_gender.png")
+	fig1.savefig(output_path, dpi=100)
+
 
 def gen_district_daily_and_cum_case(batch_date, idx, df_case, batch_out_dir):
 	
@@ -595,11 +666,16 @@ def gen_district_case_num(batch_date, df_case, batch_out_dir):
 	pd.concat([today_rank, day7_rank, day14_rank], axis=1)
 	rank_concat= pd.concat([today_rank, day7_rank, day14_rank, all], axis=1)
 	
-	rank_concat = rank_concat.filter(items = district_list, axis=0)
+	rank_concat2 = rank_concat.filter(items = district_list, axis=0)
+	sum_concat = rank_concat.sum(axis = 0, skipna=True)
+	sum_concat2 = rank_concat2.sum(axis=0, skipna=True)
+	other_concat = sum_concat - sum_concat2
+	other_concat.name="Others"
+	rank_concat2 = rank_concat2.append(other_concat)
 	
-	rank_concat = rank_concat.T
+	rank_concat2 = rank_concat2.T
 	output_path = os.path.join(batch_out_dir, 'rank_concat.json')
-	rank_concat.to_json(output_path, index=True)
+	rank_concat2.to_json(output_path, index=True)
 
 	
 def gen_hospitalize_case_summary(batch_date, df_case, batch_out_dir):
@@ -666,7 +742,7 @@ def main(batch_date, batch_data_dir, batch_out_dir):
 		gen_hk_daily_and_cum_case(batch_date, df_case, batch_out_dir)
 		gen_hk_admission_pie(batch_date, df_case, batch_out_dir)
 		gen_hk_danger_zones(batch_date, 7, df_loc, batch_out_dir)
-		
+		gen_hk_age_gender_distribution(batch_date, df_case, batch_out_dir)
 		gen_district_data(batch_date, df_case, df_loc, batch_out_dir)
 		
 		gen_district_case_num(batch_date, df_case, batch_out_dir)

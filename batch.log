@@ -1029,3 +1029,103 @@ selenium.common.exceptions.WebDriverException: Message: 'geckodriver' executable
 2021-01-03 22:16 INFO read_data
 2021-01-03 22:17 INFO Batch process end
 2021-01-03 22:17 INFO Update the slide directory
+2021-01-11 01:01 INFO init
+2021-01-11 01:01 INFO Batch process start
+2021-01-11 01:01 INFO read_data
+2021-01-11 01:02 INFO Generate hk daily case line chart
+2021-01-11 01:02 INFO Generate hk cumulative case line chart
+2021-01-11 01:02 INFO Generate hk case admission pie chart
+2021-01-11 01:02 INFO Generate hk danger zone
+2021-01-11 01:03 INFO Generating age gender distribution
+2021-01-11 01:03 ERROR Batch process end unexpectedly with an exception.
+Traceback (most recent call last):
+  File "batch.py", line 746, in main
+    gen_hk_age_gender_distribution(batch_date, df_case, batch_out_dir)
+  File "batch.py", line 424, in gen_hk_age_gender_distribution
+    print(index-w)
+UnboundLocalError: local variable 'w' referenced before assignment
+2021-01-11 01:03 INFO init
+2021-01-11 01:03 INFO Batch process start
+2021-01-11 01:03 INFO read_data
+2021-01-11 01:04 INFO Generate hk daily case line chart
+2021-01-11 01:04 INFO Generate hk cumulative case line chart
+2021-01-11 01:04 INFO Generate hk case admission pie chart
+2021-01-11 01:04 INFO Generate hk danger zone
+2021-01-11 01:05 INFO Generating age gender distribution
+2021-01-11 01:05 INFO Generate all district data 
+2021-01-11 01:05 INFO Generate daily case for district: Central and Western
+2021-01-11 01:05 INFO Generate danger zone for district: Central and Western
+2021-01-11 01:05 INFO Generate danger zone animation for district: Central and Western
+2021-01-11 01:06 INFO Generate daily case for district: Eastern
+2021-01-11 01:06 INFO Generate danger zone for district: Eastern
+2021-01-11 01:06 INFO Generate danger zone animation for district: Eastern
+2021-01-11 01:06 INFO Generate daily case for district: Southern
+2021-01-11 01:06 INFO Generate danger zone for district: Southern
+2021-01-11 01:06 INFO Generate danger zone animation for district: Southern
+2021-01-11 01:07 INFO Generate daily case for district: Wan Chai
+2021-01-11 01:07 INFO Generate danger zone for district: Wan Chai
+2021-01-11 01:07 INFO Generate danger zone animation for district: Wan Chai
+2021-01-11 01:08 INFO Generate daily case for district: Kowloon City
+2021-01-11 01:08 INFO Generate danger zone for district: Kowloon City
+2021-01-11 01:08 INFO Generate danger zone animation for district: Kowloon City
+2021-01-11 01:09 INFO Generate daily case for district: Kwun Tong
+2021-01-11 01:09 INFO Generate danger zone for district: Kwun Tong
+2021-01-11 01:09 INFO Generate danger zone animation for district: Kwun Tong
+2021-01-11 01:09 INFO Generate daily case for district: Sham Shui Po
+2021-01-11 01:09 INFO Generate danger zone for district: Sham Shui Po
+2021-01-11 01:09 INFO Generate danger zone animation for district: Sham Shui Po
+2021-01-11 01:10 INFO Generate daily case for district: Wong Tai Sin
+2021-01-11 01:10 INFO Generate danger zone for district: Wong Tai Sin
+2021-01-11 01:10 INFO Generate danger zone animation for district: Wong Tai Sin
+2021-01-11 01:11 INFO Generate daily case for district: Yau Tsim Mong
+2021-01-11 01:11 INFO Generate danger zone for district: Yau Tsim Mong
+2021-01-11 01:11 INFO Generate danger zone animation for district: Yau Tsim Mong
+2021-01-11 01:12 INFO Generate daily case for district: Islands
+2021-01-11 01:12 INFO Generate danger zone for district: Islands
+2021-01-11 01:12 INFO Generate danger zone animation for district: Islands
+2021-01-11 01:13 INFO Generate daily case for district: Kwai Tsing
+2021-01-11 01:13 INFO Generate danger zone for district: Kwai Tsing
+2021-01-11 01:13 INFO Generate danger zone animation for district: Kwai Tsing
+2021-01-11 01:14 INFO Generate daily case for district: North
+2021-01-11 01:14 INFO Generate danger zone for district: North
+2021-01-11 01:14 INFO Generate danger zone animation for district: North
+2021-01-11 01:15 INFO Generate daily case for district: Sai Kung
+2021-01-11 01:15 INFO Generate danger zone for district: Sai Kung
+2021-01-11 01:15 INFO Generate danger zone animation for district: Sai Kung
+2021-01-11 01:15 INFO Generate daily case for district: Sha Tin
+2021-01-11 01:15 INFO Generate danger zone for district: Sha Tin
+2021-01-11 01:15 INFO Generate danger zone animation for district: Sha Tin
+2021-01-11 01:16 INFO Generate daily case for district: Tai Po
+2021-01-11 01:16 INFO Generate danger zone for district: Tai Po
+2021-01-11 01:16 INFO Generate danger zone animation for district: Tai Po
+2021-01-11 01:17 INFO Generate daily case for district: Tsuen Wan
+2021-01-11 01:17 INFO Generate danger zone for district: Tsuen Wan
+2021-01-11 01:17 INFO Generate danger zone animation for district: Tsuen Wan
+2021-01-11 01:18 INFO Generate daily case for district: Tuen Mun
+2021-01-11 01:18 INFO Generate danger zone for district: Tuen Mun
+2021-01-11 01:18 INFO Generate danger zone animation for district: Tuen Mun
+2021-01-11 01:19 INFO Generate daily case for district: Yuen Long
+2021-01-11 01:19 INFO Generate danger zone for district: Yuen Long
+2021-01-11 01:19 INFO Generate danger zone animation for district: Yuen Long
+2021-01-11 01:20 INFO Generate all district case number.
+2021-01-11 01:20 ERROR Batch process end unexpectedly with an exception.
+Traceback (most recent call last):
+  File "batch.py", line 748, in main
+    gen_district_case_num(batch_date, df_case, batch_out_dir)
+  File "batch.py", line 673, in gen_district_case_num
+    other_concat.name="Others"
+NameError: name 'other_concat' is not defined
+2021-01-11 09:27 INFO init
+2021-01-11 09:27 INFO Batch process start
+2021-01-11 09:27 INFO read_data
+2021-01-11 09:27 INFO Generate all district case number.
+2021-01-11 09:27 INFO Generate hospitalize case summary.
+2021-01-11 09:27 INFO Batch process end
+2021-01-11 09:27 INFO Update the slide directory
+2021-01-11 09:33 INFO init
+2021-01-11 09:33 INFO Batch process start
+2021-01-11 09:33 INFO read_data
+2021-01-11 09:33 INFO Generate all district case number.
+2021-01-11 09:33 INFO Generate hospitalize case summary.
+2021-01-11 09:33 INFO Batch process end
+2021-01-11 09:33 INFO Update the slide directory

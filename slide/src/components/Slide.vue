@@ -22,7 +22,7 @@ export default {
                 "Yau Tsim Mong", "Islands", "Kwai Tsing", "North",
                 "Sai Kung", "Sha Tin", "Tai Po", "Tsuen Wan",
                 "Tuen Mun", "Yuen Long"],
-            hongKongDelay : 9000,
+            hongKongDelay : 11000,
             districtDelay : 7000,
         }        
     },
