@@ -409,7 +409,7 @@ def gen_hk_age_gender_distribution(batch_date, df_case, batch_out_dir):
 	counts_7 = data_district.groupby(['age_category', 'gender']).age.count().unstack()
 
 	for i in range(0, 10):
-		if i not in counts_today.index:
+		if i not in counts_7.index:
 			row = pd.Series({"M": 0, "F": 0}, name=i)
 			counts_7 = counts_7.append(row)
 
@@ -419,7 +419,7 @@ def gen_hk_age_gender_distribution(batch_date, df_case, batch_out_dir):
 	counts_14 = data_district.groupby(['age_category', 'gender']).age.count().unstack()
 
 	for i in range(0, 10):
-		if i not in counts_today.index:
+		if i not in counts_14.index:
 			row = pd.Series({"M": 0, "F": 0}, name=i)
 			counts_14 = counts_14.append(row)
 
